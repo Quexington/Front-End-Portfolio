@@ -1,0 +1,139 @@
+$bc: #282828;
+
+.friend {
+  height: 50px;
+  width: 95%;
+  margin-bottom: 25px;
+  display: flex;
+  position: relative;
+}
+
+.friend:hover {
+  .friend-controls-container {
+    visibility: visible;
+  }
+}
+
+#no-results-found-message {
+  text-align: center;
+}
+
+#friends-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+#friend-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  margin: 0px;
+}
+
+#friend-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#friend-search-bar {
+  width: 95%;
+  background-color: #484848;
+  border-color: #484848;
+  color: white;
+}
+
+.profile-icons {
+  position: relative;
+  height: 100%;
+  width: 50px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.friend-profile-text {
+  height: 100%;
+  width: 80%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.friend-text {
+  width: 100%;
+  height: 50%;
+  p {
+    margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.online-indicator {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid black;
+  height: 13px;
+  width: 13px;
+  left: 37px;
+  bottom: -6px;
+}
+
+.access-method-indicator {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.friend-controls {
+  font-size: 25px;
+}
+
+.friend-controls:hover {
+  color: #ccff00;
+}
+
+.friend-controls-container {
+  background-color: $bc;
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+  right: 0px;
+}
+
+#friend-alert {
+  #friend-alert-message-container {
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+  }
+  #friend-alert-button-container {
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button {
+      height: 50px;
+      width: 100px;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+}

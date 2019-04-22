@@ -1,0 +1,299 @@
+$bc: #282828;
+$search_bc: grey;
+
+#queue-card {
+  height: 100vh;
+}
+
+#queue-card-nav {
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  color: #787878;
+  .dev-card-header:hover {
+    color: white;
+  }
+}
+
+.queue-display {
+  height: 80%;
+}
+
+#queue {
+  position: relative;
+  left: 2.5%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+
+#queue-info {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#queue-settings {
+  position: relative;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  padding-bottom: 60px;
+  #general-queue-settings {
+    height: 275px;
+  }
+  #friend-access-queue-settings {
+    height: 450px;
+  }
+}
+
+#queue-search {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+#queue-search-bar {
+  background-color: #484848;
+  border-color: #484848;
+  color: white;
+}
+
+.search-results {
+  background-color: grey;
+  position: absolute;
+  padding: 10px;
+  padding-bottom: 0px;
+  z-index: 1;
+  top: 30px;
+  width: 100%;
+}
+
+#queue-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 25%;
+  padding-right: 15%;
+  width: 100%;
+  font-size: 36px;
+  height: 40%;
+}
+
+#queue-songs-container {
+  height: 60%;
+  #queue-current-song-container {
+    height: 100px;
+  }
+  #queue-all-song-container {
+    margin-top: 10px;
+    height: 75%;
+  }
+}
+
+#queue-all-song-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+#queue-all-song-container::-webkit-scrollbar-track {
+  background: #282828;
+}
+
+#queue-all-song-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.queue-song {
+  position: relative;
+  display: flex;
+}
+
+.queue-song-wrapper {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 25px;
+}
+
+.queue-song-wrapper:hover {
+  .song-controls {
+    visibility: visible;
+  }
+}
+
+.queue-song-img {
+  height: 50px;
+  width: 50px;
+}
+
+.queue-song-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding-left: 10px;
+  p {
+    margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.queue-song-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background-color: $bc;
+  padding-left: 10px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  p {
+    margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.queue-song-wrapper {
+  font-size: 12px;
+}
+
+.song-controls {
+  background-color: $bc;
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+  right: 0px;
+  font-size: 25px;
+}
+
+.queue-control-img:hover {
+  color: #ccff00;
+}
+
+.queue-song-controls:hover {
+  color: #ccff00;
+}
+
+.queue-search-controls:hover {
+  color: #ccff00;
+}
+
+#queue-search-results {
+  .queue-song-info {
+    background-color: $search_bc;
+  }
+  .song-controls {
+    background-color: $search_bc;
+  }
+}
+
+#queue-current-song-wrapper {
+  height: 100px;
+  font-size: 16px;
+  .queue-song-img {
+    height: 100px;
+    width: 100px;
+  }
+  color: #ccff00;
+}
+
+.queue-settings-label {
+  margin-right: 10px;
+  margin-bottom: 0px;
+  font-size: 24px;
+}
+
+@media (max-width: 520px) {
+  .queue-settings-label {
+    font-size: 16px;
+  }
+}
+
+.queue-setting-description {
+  margin-bottom: 0px;
+  margin-left: 30px;
+  color: #787878;
+}
+
+@media (max-width: 520px) {
+  .queue-setting-description {
+    font-size: 12px;
+  }
+}
+
+.queue-settings-radio, .queue-settings-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin-top: 5px;
+}
+
+.queue-settings-radio-better, .queue-settings-checkbox-better {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  margin-top: 5px;
+  background-color: #eee;
+  z-index: 1;
+}
+
+.queue-settings-radio-better:hover, .queue-settings-checkbox-better:hover {
+  background-color: #ccc;
+}
+
+.queue-settings-radio-better {
+  border-radius: 50%;
+}
+
+.queue-settings-checkbox-better {
+  border-radius: 25%;
+}
+
+.queue-settings-label {
+  margin-left: 30px;
+}
+
+.checked-radio {
+  border: 6px solid black;
+}
+
+.checked-checkbox {
+  border: 2px solid black;
+}
+
+.checked-checkbox:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 7px;
+  top: -5px;
+  width: 9px;
+  height: 25px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#access-code-container {
+  margin-left: 30px;
+  font-size: 32px;
+}
