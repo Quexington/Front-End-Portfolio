@@ -11,7 +11,7 @@ class Portfolio extends React.Component {
 
   generateThumbnails(){
     return this.props.projects.map((e, index) => {
-      return <Thumbnail src={e.src} alt={e.alt} description={e.description}/>
+      return <Thumbnail key={index} src={e.src} alt={e.alt} description={e.description}/>
     });
   }
 
