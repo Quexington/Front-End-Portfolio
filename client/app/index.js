@@ -21,7 +21,7 @@ import {createLogger} from 'redux-logger';
 import allReducers from './reducers';
 
 //**Imported componenets**
-import Layout from './Layout/container.js';
+import Main from './Main/container.js';
 
 //**Creating the Redux store with the application state and applying the above middleware
 const logger = createLogger();
@@ -34,6 +34,6 @@ const store = createStore(
 as defined by the combined reducer and component containers*/
 render((
   <Provider store={store}>
-    <Layout/>
+    <Main/>
   </Provider>
 ), document.getElementById('app'));

@@ -2,10 +2,10 @@
 import {combineReducers} from 'redux';
 
 //Importing all individual component reducers
-import layoutReducer from './Layout/reducer';
-import queueReducer from './QueueCard/reducer';
-import friendReducer from './FriendCard/reducer';
-import socialReducer from './SocialCard/reducer';
+import layoutReducer from './MusicStreaming/Layout/reducer';
+import queueReducer from './MusicStreaming/QueueCard/reducer';
+import friendReducer from './MusicStreaming/FriendCard/reducer';
+import socialReducer from './MusicStreaming/SocialCard/reducer';
 
 //Combining all of the reducers into a single representation of application state
 const allReducers = combineReducers({
