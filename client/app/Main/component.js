@@ -21,10 +21,33 @@ class Portfolio extends React.Component {
       <div id="main-container">
         <div id="header-container">
           <h1 id="main-header">Welcome to Matt Hauff's front-end development portfolio</h1>
-          <h2 id="main-subheader">New things are being added constantly so keep checking in!</h2>
+          <h2 id="main-subheader">The source code for this entire project is on my Github</h2>
         </div>
-        <div id="main-thumbnails">
-          {thumbnails}
+        <div id="main-projects-container">
+          <h2 id="main-projects-header">Projects</h2>
+          <div id="main-thumbnails">
+            {thumbnails}
+          </div>
+        </div>
+        <div id="main-info-container">
+          <div id="main-info-content-container">
+            <div id="main-info-email-container" className="main-info-content">
+              <div id="main-info-email-icon" className="main-info-icon ion-android-mail"/>
+              <p id="main-info-email-address" className="main-info-text">quexington@gmail.com</p>
+            </div>
+            <div id="main-info-phone-container" className="main-info-content">
+              <div id="main-info-phone-icon" className="main-info-icon ion-ios7-telephone"/>
+              <p id="main-info-phone-number" className="main-info-text">520-576-8175</p>
+            </div>
+            <a href="https://github.com/quexington" id="main-info-github-container" className="main-info-content">
+              <div id="main-info-github-icon" className="main-info-icon ion-social-github"/>
+              <p id="main-info-github-url" className="main-info-text">Github</p>
+            </a>
+            <a href="www.linkedin.com/in/matt-hauff-672b56135" id="main-info-linkedin-container" className="main-info-content">
+              <div id="main-info-linkedin-icon" className="main-info-icon ion-social-linkedin"/>
+              <p id="main-info-linkedin-url" className="main-info-text">LinkedIn</p>
+            </a>
+          </div>
         </div>
       </div>
     )

@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
       {
         src: "../img/thumbnails/tribute-to-superman.PNG",
         alt: "Tribute to Superman",
-        description: "Tribute to Superman",
+        description: "Tribute Page",
       },
       {
         src: "../img/thumbnails/super-registration.PNG",
@@ -58,6 +58,11 @@ const mapStateToProps = (state) => {
         src: "../img/thumbnails/heat-map.PNG",
         alt: "Heat Map",
         description: "Heat Map",
+      },
+      {
+        src: "../img/thumbnails/streaming-service.PNG",
+        alt: "Streaming Service",
+        description: "Streaming Service",
       },
     ],
   }
