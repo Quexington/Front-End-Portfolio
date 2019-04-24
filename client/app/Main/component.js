@@ -8,6 +8,7 @@ import ProductLanding from '../ProductLanding/component';
 import TechDocs from '../TechDocs/component';
 import QuoteGen from '../QuoteGen/container';
 import Calculator from '../Calculator/component';
+import Drum from '../Drum/container';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -42,6 +43,9 @@ class Portfolio extends React.Component {
         break;
       case "Javascript Calculator":
         return <div id="main-container"><Calculator/></div>
+        break;
+      case "Drum Machine":
+        return <div id="main-container"><Drum/></div>
         break;
       default:
         return (
