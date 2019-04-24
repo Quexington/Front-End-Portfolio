@@ -6,6 +6,7 @@ import Tribute from '../Tribute/component';
 import Registration from '../Registration/component';
 import ProductLanding from '../ProductLanding/component';
 import TechDocs from '../TechDocs/component';
+import QuoteGen from '../QuoteGen/container';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -24,16 +25,19 @@ class Portfolio extends React.Component {
     const thumbnails = this.generateThumbnails();
     switch (this.props.display) {
       case "Tribute Page":
-        return <Tribute/>
+        return <div id="main-container"><Tribute/></div>
         break;
       case "Registration Page":
-        return <Registration/>
+        return <div id="main-container"><Registration/></div>
         break;
       case "Product Landing Page":
-        return <ProductLanding/>
+        return <div id="main-container"><ProductLanding/></div>
         break;
       case "Technical Documentation":
-        return <TechDocs/>
+        return <div id="main-container"><TechDocs/></div>
+        break;
+      case "Random Quote Generator":
+        return <div id="main-container"><QuoteGen/></div>
         break;
       default:
         return (
