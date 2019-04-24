@@ -7,6 +7,7 @@ import Registration from '../Registration/component';
 import ProductLanding from '../ProductLanding/component';
 import TechDocs from '../TechDocs/component';
 import QuoteGen from '../QuoteGen/container';
+import Calculator from '../Calculator/component';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -38,6 +39,9 @@ class Portfolio extends React.Component {
         break;
       case "Random Quote Generator":
         return <div id="main-container"><QuoteGen/></div>
+        break;
+      case "Javascript Calculator":
+        return <div id="main-container"><Calculator/></div>
         break;
       default:
         return (
