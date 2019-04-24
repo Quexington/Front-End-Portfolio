@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import Thumbnail from './Thumbnails/container';
 
 import Tribute from '../Tribute/component';
+import Registration from '../Registration/component';
+import ProductLanding from '../ProductLanding/component';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -22,6 +24,12 @@ class Portfolio extends React.Component {
     switch (this.props.display) {
       case "Tribute Page":
         return <Tribute/>
+        break;
+      case "Registration Page":
+        return <Registration/>
+        break;
+      case "Product Landing Page":
+        return <ProductLanding/>
         break;
       default:
         return (

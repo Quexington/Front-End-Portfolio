@@ -1,0 +1,71 @@
+#registration-container {
+  background: hsl(120deg, 100%, 80%);
+}
+
+#registration-subcontainer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#registration-title {
+  font-family: 'Do Hyeon', sans-serif;
+  color: hsl(240deg, 100%, 49%);
+  align-text: center;
+}
+
+.registration-description {
+  font-size: 20px
+}
+
+#registration-main, #registration-header {
+  width: 80%;
+  margin: auto;
+}
+
+#registration-main {
+  border: solid;
+  padding: 10px;
+}
+
+#registration-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#registration-survey-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-fieldset {
+  width: 20%;
+}
+
+#registration-dropdown {
+  width: 175px;
+}
+
+.registration-fieldset {
+  padding: 0px;
+  border: none;
+}
+
+#registration-comments {
+  max-width: 50em;
+  height: 5em;
+}
+
+#registration-submit {
+  width: 5em;
+}
+
+@media (max-width: 860px){
+  .registration-fieldset {
+    width: 100%;
+  }
+
+  #registration-fields {
+    width: 100%;
+  }
+}
