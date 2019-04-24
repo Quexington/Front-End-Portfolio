@@ -1,0 +1,46 @@
+#tribute-container {
+  background: linear-gradient(225deg, #e20025, #0060AA);
+  height: 100%;
+}
+
+#tribute-main {
+  padding-top: 50px;
+}
+
+#tribute-image {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  border: solid;
+}
+
+#tribute-title {
+  font-family: 'Plaster';
+  display: flex;
+  justify-content: center;
+  color: #FFED10;
+  margin-top: 0px;
+  text-align: center;
+}
+
+#tribute-info {
+  color: #FFF8AD;
+  text-align: justify;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#tribute-info a {
+  margin: auto;
+  color: hsl(55, 100%, 53%);
+}
+
+#tribute-img-caption {
+  color: #FFF8AD;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+}

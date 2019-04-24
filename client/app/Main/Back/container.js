@@ -2,7 +2,7 @@ import React from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import Thumbnail from './component';
+import Back from './component';
 
 import actionCreators from './actionCreators';
 
@@ -18,4 +18,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Thumbnail);
+export default connect(mapStateToProps, mapDispatchToProps)(Back);

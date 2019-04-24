@@ -8,6 +8,7 @@ import actionCreators from './actionCreators';
 
 const mapStateToProps = (state) => {
   return {
+    display: state.main.display,
     projects: [
       {
         src: "../img/thumbnails/tribute-to-superman.PNG",

@@ -6,6 +6,19 @@ $step-1: #379683;
 $step-2: #5cdb95;
 $step-3: #8ee4af;
 
+#main-back-div {
+  position: fixed;
+  cursor: pointer;
+  height: 50px;
+  width: 100%;
+  background-color: $base;
+  color: $text-color;
+  font-family: 'Righteous', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #main-container {
   background-color: $base;
   height: 100%;
