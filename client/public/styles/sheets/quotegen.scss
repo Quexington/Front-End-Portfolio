@@ -1,11 +1,12 @@
 #quotegen-container {
   background-image: url("https://i.imgur.com/U0Y2pqS.jpg");
+  min-height: 100vh;
 }
 
 #quotegen-subcontainer {
   width: 100%;
   padding-top: 100px;
-  padding-bottom: 50%;
+  padding-bottom: 50px;
 }
 
 #quotegen-quote-box {

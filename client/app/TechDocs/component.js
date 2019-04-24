@@ -17,11 +17,11 @@ class TechDocs extends React.Component {
               <header>
                 <h1 id="techdocs-h1">LexOS start-up guide</h1>
               </header>
-              <a className="techdocs-nav-link" href="#installation">Installation</a><br/>
-              <a className="techdocs-nav-link" href="#configuration">Configuration</a><br/>
-              <a className="techdocs-nav-link" href="#capabilities">Capabilities</a><br/>
-              <a className="techdocs-nav-link" href="#security">Security</a><br/>
-              <a className="techdocs-nav-link" href="#development">Development</a><br/>
+              <a className="techdocs-nav-link" href="#techdocs-installation">Installation</a><br/>
+              <a className="techdocs-nav-link" href="#techdocs-configuration">Configuration</a><br/>
+              <a className="techdocs-nav-link" href="#techdocs-capabilities">Capabilities</a><br/>
+              <a className="techdocs-nav-link" href="#techdocs-security">Security</a><br/>
+              <a className="techdocs-nav-link" href="#techdocs-development">Development</a><br/>
             </div>
           </nav>
           <section id="techdocs-installation" className="techdocs-main-section">

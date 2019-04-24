@@ -44,7 +44,7 @@ class Portfolio extends React.Component {
           <div id="main-container">
             <div id="header-container">
               <h1 id="main-header">Welcome to Matt Hauff's front-end development portfolio</h1>
-              <h2 id="main-subheader">The source code for this entire project is on my Github</h2>
+              <h2 id="main-subheader">The source code for this entire project is on my <a href="https://github.com/quexington">Github</a></h2>
             </div>
             <div id="main-projects-container">
               <h2 id="main-projects-header">Projects</h2>
