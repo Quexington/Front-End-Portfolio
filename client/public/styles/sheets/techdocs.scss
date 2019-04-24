@@ -1,0 +1,85 @@
+#techdocs-container {
+  background: #85de48;
+  color: #50226D;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#techdocs-main-doc {
+  height: 100%;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "navbar content-1"
+    "navbar content-2"
+    "navbar content-3"
+    "navbar content-4"
+    "navbar content-5";
+}
+
+#techdocs-navbar {
+  grid-area: navbar;
+  height: 100%;
+}
+
+#techdocs-installation {
+  grid-area: content-1;
+}
+
+#techdocs-configuration {
+  grid-area: content-2;
+}
+
+#techdocs-capabilities {
+  grid-area: content-3;
+}
+
+#techdocs-security {
+  grid-area: content-4;
+}
+
+#techdocs-development {
+  grid-area: content-5;
+}
+
+#techdocs-flex-fix {
+  display: flex;
+  border: solid black;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+#techdocs-h1 {
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Share Tech', sans-serif;
+}
+
+.techdocs-nav-link {
+  text-decoration: none;
+  color: #50226D;
+  font-size: 20px;
+  border: solid 3px;
+  width: 60%;
+  text-align: center;
+  padding: 2px 0px 2px 0px;
+}
+
+@media (max-width: 1086px) {
+  #techdocs-h1 {
+    font-size: 25px;
+  }
+
+  .techdocs-nav-link {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  #techdocs-navbar {
+    display: none;
+  }
+}

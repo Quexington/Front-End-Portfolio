@@ -34,7 +34,7 @@ class ProductLanding extends React.Component {
                 </span>
                 <p className="product-about-descriptions">We understand that your biggest concern when choosing to protect your device with software for Lexcorp is the fact that we may be run by supervillians.  We promise, we're not.  LexOS will never let anyone except you access your device. The revolutionary authentication screen requires a fingerprint, biometric eye scan, facial recognition, AND a voice sample.</p>
                 <span className="product-about-labels">
-                  <img alt="free" src="https://cdn2.iconfinder.com/data/icons/blocked-out/29/lock-512.png"/>
+                  <img alt="free" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/price_tag-512.png"/>
                   <h1>Free</h1>
                 </span>
                 <p className="product-about-descriptions">Because we <s>want to have a globally distributed and weaponized hostage system</s> love you, LexOS will be completely free and for any device you already own.  Sign up below to receive the free beta when it is released!</p>

@@ -5,6 +5,7 @@ import Thumbnail from './Thumbnails/container';
 import Tribute from '../Tribute/component';
 import Registration from '../Registration/component';
 import ProductLanding from '../ProductLanding/component';
+import TechDocs from '../TechDocs/component';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -30,6 +31,9 @@ class Portfolio extends React.Component {
         break;
       case "Product Landing Page":
         return <ProductLanding/>
+        break;
+      case "Technical Documentation":
+        return <TechDocs/>
         break;
       default:
         return (
