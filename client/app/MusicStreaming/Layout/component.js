@@ -4,6 +4,8 @@ import QueueCard from '../QueueCard/container';
 import FriendCard from '../FriendCard/container';
 import SocialCard from '../SocialCard/container';
 
+import Back from '../../Main/Back/container';
+
 class Layout extends React.Component {
   constructor(props) {
     super(props);
@@ -54,6 +56,7 @@ class Layout extends React.Component {
     if (this.state.width > 1075) {
       return (
         <div style={alertFix} id="layout-container">
+          <Back/>
           {this.props.loading ? <p className="loading">Loading...</p> :
           <div id="layout">
             <SocialCard/>
@@ -66,24 +69,27 @@ class Layout extends React.Component {
     else {
       return (
         <div style={alertFix} id="layout-container">
-          <div id="layout-nav-button" className="ion-navicon-round" onClick={()=>{this.setState({menu: !this.state.menu})}}/>
-          {!this.state.menu ? null :
-            <nav id="layout-nav">
-              <div className="layout-nav-item" onClick={()=>{
-                this.setState({option: "queue"});
-                this.setState({menu: !this.state.menu});
-              }}><p>Queue</p></div>
-              <div className="layout-nav-item" onClick={()=>{
-                this.setState({option: "social"});
-                this.setState({menu: !this.state.menu});
-              }}><p>Social</p></div>
-              <div className="layout-nav-item" onClick={()=>{
-                this.setState({option: "feed"});
-                this.setState({menu: !this.state.menu});
-              }}><p>Feed</p></div>
-            </nav>
-          }
-          {currentDisplay}
+          <Back/>
+          <div id="layout">
+            <div id="layout-nav-button" className="ion-navicon-round" onClick={()=>{this.setState({menu: !this.state.menu})}}/>
+            {!this.state.menu ? null :
+              <nav id="layout-nav">
+                <div className="layout-nav-item" onClick={()=>{
+                  this.setState({option: "queue"});
+                  this.setState({menu: !this.state.menu});
+                }}><p>Queue</p></div>
+                <div className="layout-nav-item" onClick={()=>{
+                  this.setState({option: "social"});
+                  this.setState({menu: !this.state.menu});
+                }}><p>Social</p></div>
+                <div className="layout-nav-item" onClick={()=>{
+                  this.setState({option: "feed"});
+                  this.setState({menu: !this.state.menu});
+                }}><p>Feed</p></div>
+              </nav>
+            }
+            {currentDisplay}
+          </div>
         </div>
       )
     }

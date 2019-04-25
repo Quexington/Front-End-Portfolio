@@ -12,6 +12,7 @@ import Drum from '../Drum/container';
 import GDP from '../GDP/component';
 import Scatterplot from '../Scatterplot/component';
 import HeatMap from '../HeatMap/component';
+import Streaming from '../MusicStreaming/Layout/container';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -58,6 +59,9 @@ class Portfolio extends React.Component {
         break;
       case "Heat Map":
         return <div id="main-container"><HeatMap/></div>;
+        break;
+      case "Streaming Service":
+        return <div id="main-container"><Streaming/></div>;
         break;
       default:
         return (

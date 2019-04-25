@@ -22,11 +22,11 @@ const actionCreators = {
             const results = [{
               "friend_id": "3",
               "session_id": "",
-              "profile-pic-url": "../img/gzanth11-profile-pic.jpg",
+              "profile-pic-url": "../img/user5-profile-pic.jpg",
               "online": "false",
               "streaming": "false",
               "access-method": "none",
-              "username": "gzanth11",
+              "username": "user5",
               "current-playing": "",
               "last-online": "1 14 18 2 0",
             },];
