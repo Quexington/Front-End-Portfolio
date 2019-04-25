@@ -10,6 +10,7 @@ import QuoteGen from '../QuoteGen/container';
 import Calculator from '../Calculator/component';
 import Drum from '../Drum/container';
 import GDP from '../GDP/component';
+import Scatterplot from '../Scatterplot/component';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -50,6 +51,9 @@ class Portfolio extends React.Component {
         break;
       case "Bar Chart":
         return <div id="main-container"><GDP/></div>;
+        break;
+      case "Scatterplot":
+        return <div id="main-container"><Scatterplot/></div>;
         break;
       default:
         return (
