@@ -11,6 +11,7 @@ import Calculator from '../Calculator/component';
 import Drum from '../Drum/container';
 import GDP from '../GDP/component';
 import Scatterplot from '../Scatterplot/component';
+import HeatMap from '../HeatMap/component';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -54,6 +55,9 @@ class Portfolio extends React.Component {
         break;
       case "Scatterplot":
         return <div id="main-container"><Scatterplot/></div>;
+        break;
+      case "Heat Map":
+        return <div id="main-container"><HeatMap/></div>;
         break;
       default:
         return (
