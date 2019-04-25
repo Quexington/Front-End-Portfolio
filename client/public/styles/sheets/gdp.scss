@@ -1,0 +1,15 @@
+#gdp-container {
+  background-color: #5cdb95;
+}
+
+#gdp-subcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  min-height: 100vh;
+}
+
+.gdp-bar:hover {
+  fill: green;
+}
