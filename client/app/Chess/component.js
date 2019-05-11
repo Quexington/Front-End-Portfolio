@@ -238,7 +238,14 @@ class Chess extends React.Component {
           let square = el.target;
           let allSquares = Array.from(document.getElementsByClassName("chess-square"));
           let moveables = allSquares.filter((elem) => {
-            return elem.innerText == ""
+            //return elem.innerText == ""
+            return (this.state.pieces.filter((q) => {
+              return q.position == elem.id.split("-")[2]
+            }).length == 0) || (this.state.pieces.filter((q) => {
+              return q.position == elem.id.split("-")[2]
+            })[0].color != this.state.pieces.filter((q) => {
+              return q.position == square.id.split("-")[2]
+            })[0].color)
           });
           if (square.style.backgroundColor == "yellow") {
             square.style.backgroundColor = "";
@@ -304,6 +311,13 @@ class Chess extends React.Component {
     const target = this.state.pieces.filter((e) => {
       return e.position == origin
     })[0];
+    const test = this.state.pieces.filter((e) => {
+      return e.position == dest
+    });
+    if (test.length > 0) {
+      const index = copy.indexOf(test[0]);
+      copy.splice(index, 1);
+    }
     const index = copy.indexOf(target);
     copy.splice(index, 1);
     copy.push(Object.assign({}, target, {position: dest}));
@@ -311,14 +325,6 @@ class Chess extends React.Component {
   }
 
   logBoard(){
-    /*const sortedPieces = this.state.pieces.sort((first, second) => {
-      if (first.position[1] == second.position[1]) {
-        return first.position[0] < second.position[0] ? -1 : 1;
-      }
-      else {
-        return first.position[1] < second.position[1] ? -1 : 1;
-      }
-    });*/
     const files = ["a", "b", "c", "d", "e", "f", "g", "h"];
     let squares = [];
     for (let i = 8; i > 0; i--) {
@@ -334,20 +340,6 @@ class Chess extends React.Component {
       }
     }
     console.log(squares);
-    /*const squares = Array.from(document.getElementsByClassName("chess-square"));
-    const output = squares.map((e) => {
-      if (e.innerText != "") {
-        const square = e.id.split("-")[2];
-        const color = this.state.pieces.filter((el) => {
-          return el.position == square
-        })[0].color[0];
-        return e.innerText + color
-      }
-      else {
-        return ""
-      }
-    });
-    console.log(output);*/
   }
 
   render(){
