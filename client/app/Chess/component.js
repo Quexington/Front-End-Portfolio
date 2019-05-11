@@ -7,208 +7,218 @@ class Chess extends React.Component {
     super(props);
     //Initial state
     this.state = {
-      pieces: [
-        {
-          id: "a1",
-          position: "a1",
-          icon: "♜",
-          color: "white",
-        },
-        {
-          id: "b1",
-          position: "b1",
-          icon: "♞",
-          color: "white",
-        },
-        {
-          id: "c1",
-          position: "c1",
-          icon: "♝",
-          color: "white",
-        },
-        {
-          id: "d1",
-          position: "d1",
-          icon: "♛",
-          color: "white",
-        },
-        {
-          id: "e1",
-          position: "e1",
-          icon: "♚",
-          color: "white",
-        },
-        {
-          id: "f1",
-          position: "f1",
-          icon: "♝",
-          color: "white",
-        },
-        {
-          id: "g1",
-          position: "g1",
-          icon: "♞",
-          color: "white",
-        },
-        {
-          id: "h1",
-          position: "h1",
-          icon: "♜",
-          color: "white",
-        },
-        {
-          id: "a2",
-          position: "a2",
-          icon: "♟",
-          color: "white",
-        },
-        {
-          id: "b2",
-          position: "b2",
-          icon: "♟",
-          color: "white",
-        },
-        {
-          id: "c2",
-          position: "c2",
-          icon: "♟",
-          color: "white",
-        },
-        {
-          id: "d2",
-          position: "d2",
-          icon: "♟",
-          color: "white",
-        },
-        {
-          id: "e2",
-          position: "e2",
-          icon: "♟",
-          color: "white",
-        },
-        {
-          id: "f2",
-          position: "f2",
-          icon: "♟",
-          color: "white",
-        },
-        {
-          id: "g2",
-          position: "g2",
-          icon: "♟",
-          color: "white",
-        },
-        {
-          id: "h2",
-          position: "h2",
-          icon: "♟",
-          color: "white",
-        },
-        {
-          id: "a8",
-          position: "a8",
-          icon: "♜",
-          color: "black",
-        },
-        {
-          id: "b8",
-          position: "b8",
-          icon: "♞",
-          color: "black",
-        },
-        {
-          id: "c8",
-          position: "c8",
-          icon: "♝",
-          color: "black",
-        },
-        {
-          id: "d8",
-          position: "d8",
-          icon: "♛",
-          color: "black",
-        },
-        {
-          id: "e8",
-          position: "e8",
-          icon: "♚",
-          color: "black",
-        },
-        {
-          id: "f8",
-          position: "f8",
-          icon: "♝",
-          color: "black",
-        },
-        {
-          id: "g8",
-          position: "g8",
-          icon: "♞",
-          color: "black",
-        },
-        {
-          id: "h8",
-          position: "h8",
-          icon: "♜",
-          color: "black",
-        },
-        {
-          id: "a7",
-          position: "a7",
-          icon: "♟",
-          color: "black",
-        },
-        {
-          id: "b7",
-          position: "b7",
-          icon: "♟",
-          color: "black",
-        },
-        {
-          id: "c7",
-          position: "c7",
-          icon: "♟",
-          color: "black",
-        },
-        {
-          id: "d7",
-          position: "d7",
-          icon: "♟",
-          color: "black",
-        },
-        {
-          id: "e7",
-          position: "e7",
-          icon: "♟",
-          color: "black",
-        },
-        {
-          id: "f7",
-          position: "f7",
-          icon: "♟",
-          color: "black",
-        },
-        {
-          id: "g7",
-          position: "g7",
-          icon: "♟",
-          color: "black",
-        },
-        {
-          id: "h7",
-          position: "h7",
-          icon: "♟",
-          color: "black",
-        },
-      ]
+      pieces: [],
     }
     //Binding local functions to this
     this.generateBoard = this.generateBoard.bind(this);
     this.movePiece = this.movePiece.bind(this);
+    this.componentWillMount = this.componentWillMount.bind(this);
+  }
+
+  componentWillMount(){
+    this.setState({pieces: [
+      {
+        id: "a1",
+        position: "a1",
+        icon: "♜",
+        color: "white",
+      },
+      {
+        id: "b1",
+        position: "b1",
+        icon: "♞",
+        color: "white",
+      },
+      {
+        id: "c1",
+        position: "c1",
+        icon: "♝",
+        color: "white",
+      },
+      {
+        id: "d1",
+        position: "d1",
+        icon: "♛",
+        color: "white",
+      },
+      {
+        id: "e1",
+        position: "e1",
+        icon: "♚",
+        color: "white",
+      },
+      {
+        id: "f1",
+        position: "f1",
+        icon: "♝",
+        color: "white",
+      },
+      {
+        id: "g1",
+        position: "g1",
+        icon: "♞",
+        color: "white",
+      },
+      {
+        id: "h1",
+        position: "h1",
+        icon: "♜",
+        color: "white",
+      },
+      {
+        id: "a2",
+        position: "a2",
+        icon: "♟",
+        color: "white",
+      },
+      {
+        id: "b2",
+        position: "b2",
+        icon: "♟",
+        color: "white",
+      },
+      {
+        id: "c2",
+        position: "c2",
+        icon: "♟",
+        color: "white",
+      },
+      {
+        id: "d2",
+        position: "d2",
+        icon: "♟",
+        color: "white",
+      },
+      {
+        id: "e2",
+        position: "e2",
+        icon: "♟",
+        color: "white",
+      },
+      {
+        id: "f2",
+        position: "f2",
+        icon: "♟",
+        color: "white",
+      },
+      {
+        id: "g2",
+        position: "g2",
+        icon: "♟",
+        color: "white",
+      },
+      {
+        id: "h2",
+        position: "h2",
+        icon: "♟",
+        color: "white",
+      },
+      {
+        id: "a8",
+        position: "a8",
+        icon: "♜",
+        color: "black",
+      },
+      {
+        id: "b8",
+        position: "b8",
+        icon: "♞",
+        color: "black",
+      },
+      {
+        id: "c8",
+        position: "c8",
+        icon: "♝",
+        color: "black",
+      },
+      {
+        id: "d8",
+        position: "d8",
+        icon: "♛",
+        color: "black",
+      },
+      {
+        id: "e8",
+        position: "e8",
+        icon: "♚",
+        color: "black",
+      },
+      {
+        id: "f8",
+        position: "f8",
+        icon: "♝",
+        color: "black",
+      },
+      {
+        id: "g8",
+        position: "g8",
+        icon: "♞",
+        color: "black",
+      },
+      {
+        id: "h8",
+        position: "h8",
+        icon: "♜",
+        color: "black",
+      },
+      {
+        id: "a7",
+        position: "a7",
+        icon: "♟",
+        color: "black",
+      },
+      {
+        id: "b7",
+        position: "b7",
+        icon: "♟",
+        color: "black",
+      },
+      {
+        id: "c7",
+        position: "c7",
+        icon: "♟",
+        color: "black",
+      },
+      {
+        id: "d7",
+        position: "d7",
+        icon: "♟",
+        color: "black",
+      },
+      {
+        id: "e7",
+        position: "e7",
+        icon: "♟",
+        color: "black",
+      },
+      {
+        id: "f7",
+        position: "f7",
+        icon: "♟",
+        color: "black",
+      },
+      {
+        id: "g7",
+        position: "g7",
+        icon: "♟",
+        color: "black",
+      },
+      {
+        id: "h7",
+        position: "h7",
+        icon: "♟",
+        color: "black",
+      },
+    ]}, () => {
+      let allSquares = Array.from(document.getElementsByClassName("chess-square"));
+      allSquares.map((e) => {
+        e.innerText = "";
+      });
+      this.componentWillUpdate();
+    });
   }
 
   componentWillUpdate(){
-    console.log("Hello");
     this.state.pieces.map((e) => {
       let label = "chess-square-" + e.position;
       let sqr = document.getElementById(label);
@@ -216,39 +226,49 @@ class Chess extends React.Component {
       sqr.style.color = e.color;
       sqr.style.cursor = "pointer";
       sqr.onclick = (el) => {
-        let square = el.target;
-        let allSquares = Array.from(document.getElementsByClassName("chess-square"));
-        let moveables = allSquares.filter((elem) => {
-          return elem.innerText == ""
+        let bool = true;
+        this.state.pieces.map((q) => {
+          let label_q = "chess-square-" + q.position;
+          let sqr_q = document.getElementById(label_q);
+          if (sqr_q.style.backgroundColor == "yellow") {
+            bool = false;
+          }
         });
-        if (square.style.backgroundColor == "yellow") {
-          square.style.backgroundColor = "";
-          moveables.map((elem) => {
-            moveables.map((ee) => {
-              ee.onclick = null;
-            });
+        if (bool) {
+          let square = el.target;
+          let allSquares = Array.from(document.getElementsByClassName("chess-square"));
+          let moveables = allSquares.filter((elem) => {
+            return elem.innerText == ""
           });
-        }
-        else {
-          square.style.backgroundColor = "yellow";
-          moveables.map((elem) => {
-            elem.onclick = (element) => {
-              let dest = element.target.id.split("-")[2];
-              let origin = el.target.id.split("-")[2];
-              this.movePiece(origin, dest);
-              this.componentWillUpdate();
-              square.style.backgroundColor = "";
-              sqr.innerText = "";
-              sqr.style.color = "";
-              sqr.style.cursor = "";
-              moveables = allSquares.filter((elem) => {
-                return elem.innerText == ""
-              });
+          if (square.style.backgroundColor == "yellow") {
+            square.style.backgroundColor = "";
+            moveables.map((elem) => {
               moveables.map((ee) => {
                 ee.onclick = null;
               });
-            }
-          });
+            });
+          }
+          else {
+            square.style.backgroundColor = "yellow";
+            moveables.map((elem) => {
+              elem.onclick = (element) => {
+                let dest = element.target.id.split("-")[2];
+                let origin = el.target.id.split("-")[2];
+                this.movePiece(origin, dest);
+                this.componentWillUpdate();
+                square.style.backgroundColor = "";
+                sqr.innerText = "";
+                sqr.style.color = "";
+                sqr.style.cursor = "";
+                moveables = allSquares.filter((elem) => {
+                  return elem.innerText == ""
+                });
+                moveables.map((ee) => {
+                  ee.onclick = null;
+                });
+              }
+            });
+          }
         }
       }
     });
@@ -298,6 +318,9 @@ class Chess extends React.Component {
           <div id="chess-board">
             {squares}
           </div>
+          <button onClick={this.componentWillMount} className="btn btn-primary" id="chess-reset-button">
+            Reset
+          </button>
         </div>
       </div>
     )

@@ -64,7 +64,7 @@ class Portfolio extends React.Component {
       case "Streaming Service":
         return <div id="main-container"><Streaming/></div>;
         break;
-      case "Chess Game":
+      case "Chess Board":
         return <div id="main-container"><Chess/></div>
       default:
         return (

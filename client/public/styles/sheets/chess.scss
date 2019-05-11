@@ -3,8 +3,9 @@
   background-color: #507397;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   user-select: none;
 }
 
