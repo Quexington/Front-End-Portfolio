@@ -13,6 +13,7 @@ import GDP from '../GDP/component';
 import Scatterplot from '../Scatterplot/component';
 import HeatMap from '../HeatMap/component';
 import Streaming from '../MusicStreaming/Layout/container';
+import Chess from '../Chess/component';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -63,6 +64,8 @@ class Portfolio extends React.Component {
       case "Streaming Service":
         return <div id="main-container"><Streaming/></div>;
         break;
+      case "Chess Game":
+        return <div id="main-container"><Chess/></div>
       default:
         return (
           <div id="main-container">
@@ -90,7 +93,7 @@ class Portfolio extends React.Component {
                   <div id="main-info-github-icon" className="main-info-icon ion-social-github"/>
                   <p id="main-info-github-url" className="main-info-text">Github</p>
                 </a>
-                <a href="www.linkedin.com/in/matt-hauff-672b56135" id="main-info-linkedin-container" className="main-info-content">
+                <a href="https://www.linkedin.com/in/matt-hauff-672b56135" id="main-info-linkedin-container" className="main-info-content">
                   <div id="main-info-linkedin-icon" className="main-info-icon ion-social-linkedin"/>
                   <p id="main-info-linkedin-url" className="main-info-text">LinkedIn</p>
                 </a>

@@ -65,6 +65,11 @@ const mapStateToProps = (state) => {
         alt: "Streaming Service",
         description: "Streaming Service",
       },
+      {
+        src: "../img/thumbnails/chess.PNG",
+        alt: "Chess Game",
+        description: "Chess Game",
+      },
     ],
   }
 }
