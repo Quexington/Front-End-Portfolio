@@ -272,6 +272,7 @@ class Chess extends React.Component {
         }
       }
     });
+    this.logBoard();
   }
 
   componentDidMount(){
@@ -307,6 +308,46 @@ class Chess extends React.Component {
     copy.splice(index, 1);
     copy.push(Object.assign({}, target, {position: dest}));
     this.setState({pieces: copy});
+  }
+
+  logBoard(){
+    /*const sortedPieces = this.state.pieces.sort((first, second) => {
+      if (first.position[1] == second.position[1]) {
+        return first.position[0] < second.position[0] ? -1 : 1;
+      }
+      else {
+        return first.position[1] < second.position[1] ? -1 : 1;
+      }
+    });*/
+    const files = ["a", "b", "c", "d", "e", "f", "g", "h"];
+    let squares = [];
+    for (let i = 8; i > 0; i--) {
+      for (var q = 0; q < 8; q++) {
+        const label = files[q] + i.toString();
+        const filteredArray = this.state.pieces.filter((e) => {return e.position == label});
+        if (filteredArray.length == 0) {
+          squares.push("");
+        }
+        else {
+          squares.push(filteredArray[0].icon + filteredArray[0].color[0]);
+        }
+      }
+    }
+    console.log(squares);
+    /*const squares = Array.from(document.getElementsByClassName("chess-square"));
+    const output = squares.map((e) => {
+      if (e.innerText != "") {
+        const square = e.id.split("-")[2];
+        const color = this.state.pieces.filter((el) => {
+          return el.position == square
+        })[0].color[0];
+        return e.innerText + color
+      }
+      else {
+        return ""
+      }
+    });
+    console.log(output);*/
   }
 
   render(){
