@@ -14,6 +14,7 @@ import Scatterplot from '../Scatterplot/component';
 import HeatMap from '../HeatMap/component';
 import Streaming from '../MusicStreaming/Layout/container';
 import Chess from '../Chess/component';
+import BartendingDrills from '../BartendingDrills/component';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -66,6 +67,8 @@ class Portfolio extends React.Component {
         break;
       case "Chess Board":
         return <div id="main-container"><Chess/></div>
+      case "Bartending Drills":
+        return <div id="main-container"><BartendingDrills/></div>
       default:
         return (
           <div id="main-container">

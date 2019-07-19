@@ -66,10 +66,15 @@ const mapStateToProps = (state) => {
         description: "Streaming Service",
       },
       {
+        src: "../img/thumbnails/bartending-drills.PNG",
+        alt: "Bartending Drills",
+        description: "Bartending Drills",
+      },
+      /*{
         src: "../img/thumbnails/chess.PNG",
         alt: "Chess Board",
         description: "Chess Board",
-      },
+      },*/
     ],
   }
 }
