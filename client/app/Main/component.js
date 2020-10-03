@@ -14,7 +14,6 @@ import Scatterplot from '../Scatterplot/component';
 import HeatMap from '../HeatMap/component';
 import Streaming from '../MusicStreaming/Layout/container';
 import Chess from '../Chess/component';
-import BartendingDrills from '../BartendingDrills/component';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -25,7 +24,14 @@ class Portfolio extends React.Component {
 
   generateThumbnails(){
     return this.props.projects.map((e, index) => {
-      return <Thumbnail key={index} src={e.src} alt={e.alt} description={e.description}/>
+      const styleObj = {
+        position: "relative"
+      }
+      return (
+        <div style={styleObj}>
+          <Thumbnail key={index} src={e.src} alt={e.alt} description={e.description}/>
+        </div>
+      )
     });
   }
 
@@ -44,7 +50,7 @@ class Portfolio extends React.Component {
       case "Technical Documentation":
         return <div id="main-container"><TechDocs/></div>
         break;
-      case "Random Quote Generator":
+      case "Quote Generator":
         return <div id="main-container"><QuoteGen/></div>
         break;
       case "Javascript Calculator":
@@ -67,14 +73,42 @@ class Portfolio extends React.Component {
         break;
       case "Chess Board":
         return <div id="main-container"><Chess/></div>
-      case "Bartending Drills":
-        return <div id="main-container"><BartendingDrills/></div>
       default:
+        var animateClass = this.props.animations ? "main-front-ps open-animate" : "main-front-ps"
         return (
           <div id="main-container">
-            <div id="header-container">
-              <h1 id="main-header">Welcome to Matt Hauff's front-end development portfolio</h1>
-              <h2 id="main-subheader">The source code for this entire project is on my <a href="https://github.com/quexington">Github</a></h2>
+            <div id="main-front-section">
+              <h1 class="main-front-text"><p id="hi" class={animateClass}>Hi,&nbsp;</p><p id="iam" class={animateClass}>I'm Matt Hauff</p></h1>
+              <h1 class="main-front-text"><p id="thisis" class={animateClass}>This is my web development portfolio</p></h1>
+              <h3 class="main-front-text"><p id="lookat" class={animateClass}>You can tell from the cool animations,</p></h3>
+              <h3 class="main-front-text"><p id="thati" class={animateClass}>that I'm really&nbsp;</p><p id="really" class={animateClass}>REALLY&nbsp;</p><p id="good" class={animateClass}>good</p></h3>
+              <br/>
+              <h4 class="main-front-text"><p id="takea" class={animateClass}>Take a look around</p></h4>
+              <h4 class="main-front-text"><p id="thewhole" class={animateClass}>The whole project is on my <a href="https://github.com/quexington">Github</a></p></h4>
+              <h5 class="main-front-text"><p id="letme" class={animateClass}>Let me know what you think...</p><p id="thanks" class={animateClass}>and thanks!</p></h5>
+            </div>
+            <div id="main-about">
+              <div id="main-about-content">
+                <div id="main-about-text-container">
+                  <h1 id="main-about-header">About Me</h1>
+                  <p id="main-about-text">
+                  I've been messing around with code since I was 12, starting with MIT's Scratch software for kids.  I taught myself C++ by printing out screenshots from a tutorial website and reading them on my drives to and from school.  Since then, I've put together book reports, text adventure games, html pages making fun of my friends, school projects, calculator games, single page web apps, powershell scripts to administer enterprise level email servers, small business websites, sports analytics software, web scrapers, and even dipped my toe into AI.  I pride myself on being a jack of all trades, a master of none, and I'm always looking for opportunities to add new skills to my portfolio.
+                  </p>
+                </div>
+                <div id="main-about-languages-container">
+                  <h2 id="main-about-languages-header">Here are some languages I know:</h2>
+                  <div id="main-about-languages">
+                    <div class="language-container" id="react"><img class="language-thing" src="./img/react-logo.png" alt="React"/></div>
+                    <div class="language-container" id="redux"><img class="language-thing" src="./img/redux-logo.png" alt="Redux"/></div>
+                    <div class="language-container" id="powershell"><img class="language-thing" src="./img/powershell-logo.png" alt="Powershell"/></div>
+                    <div class="language-container" id="html"><img class="language-thing" src="./img/html-logo.png" alt="HTML"/></div>
+                    <div class="language-container" id="sass"><img class="language-thing" src="./img/sass-logo.png" alt="Sass"/></div>
+                    <div class="language-container" id="r"><img class="language-thing" src="./img/r-logo.png" alt="R"/></div>
+                    <div class="language-container" id="python"><img class="language-thing" src="./img/python-logo.png" alt="Python"/></div>
+                    <div class="language-container" id="rust"><img class="language-thing" src="./img/rust-logo.png" alt="Rust"/></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div id="main-projects-container">
               <h2 id="main-projects-header">Projects</h2>

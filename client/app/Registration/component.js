@@ -20,14 +20,14 @@ class Registration extends React.Component {
           <main id="registration-main">
             <form id="registration-survey-form">
               <div id="registration-fields">
-                <label id="registration-name-label" htmlFor="name">Name</label><br/>
+                <label id="registration-name-label" className="registration-question-labels" htmlFor="name">Name</label><br/>
                 <input id="registration-name" type="text" required placeholder="name here"/><br/><br/>
-                <label id="registration-email-label" htmlFor="email">Email</label><br/>
+                <label id="registration-email-label" className="registration-question-labels" htmlFor="email">Email</label><br/>
                 <input id="registration-email" type="email" required placeholder="email here"/><br/><br/>
-                <label id="registration-number-label" htmlFor="number">Intensity of super powers (0 to 10)</label><br/>
+                <label id="registration-number-label" className="registration-question-labels" htmlFor="number">Intensity of super powers (0 to 10)</label><br/>
                 <input id="registration-number" type="number" min="1" max="10" placeholder="#"/><br/><br/>
               </div>
-              <label htmlFor="dropdown">Desired powers</label>
+              <label className="registration-question-labels" htmlFor="dropdown">Desired powers</label>
               <select id="registration-dropdown">
                 <option value="defense">Defense Suite</option>
                 <option value="ranged">Ranged Suite</option>
@@ -35,7 +35,7 @@ class Registration extends React.Component {
                 <option value="superman">Superman Complete</option>
               </select>
               <br/>
-              <label htmlFor="radios">Sex</label><br/>
+              <label className="registration-question-labels" htmlFor="radios">Sex</label><br/>
               <fieldset id="registration-radios" className="registration-fieldset">
                 <input id="registration-radio-one" name="radios" type="radio" value="radio-two"/>
                 <label htmlFor="radio-one">Male</label><br/>
@@ -45,7 +45,7 @@ class Registration extends React.Component {
                 <label htmlFor="radio-three">Alien</label>
               </fieldset>
               <br/>
-              <label htmlFor="addons">Add-Ons</label><br/>
+              <label className="registration-question-labels" htmlFor="addons">Add-Ons</label><br/>
               <fieldset id="registration-addons" className="registration-fieldset">
                 <input id="registration-flying" name="checks" type="checkbox" value="flying"/>
                 <label htmlFor="flying">Flying</label><br/>
@@ -57,7 +57,7 @@ class Registration extends React.Component {
                 <label htmlFor="strength">Strength</label><br/>
               </fieldset>
               <br/>
-              <label htmlFor="comments">Additional info about your desired superpowers:</label>
+              <label className="registration-question-labels" htmlFor="comments">Additional info about your desired superpowers:</label>
               <textarea id="registration-comments"></textarea>
               <br/>
               <input id="registration-submit" type="submit"/>

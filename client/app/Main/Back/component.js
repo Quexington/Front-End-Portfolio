@@ -7,10 +7,11 @@ class Back extends React.Component {
 
   render() {
     return (
-      <a href="#"><p id="main-back-div" onClick={()=>{
+      <p id="main-back-div" onClick={()=>{
         this.props.update("main");
+        this.props.stopAnimations();
         window.scrollTo(0,0);
-      }}>Back to Portfolio</p></a>
+      }}>← Back to Portfolio</p>
     )
   }
 }

@@ -9,6 +9,7 @@ import actionCreators from './actionCreators';
 const mapStateToProps = (state) => {
   return {
     display: state.main.display,
+    animations: state.main.animations,
     projects: [
       {
         src: "../img/thumbnails/tribute-to-superman.PNG",
@@ -32,8 +33,8 @@ const mapStateToProps = (state) => {
       },
       {
         src: "../img/thumbnails/random-quote-generator.PNG",
-        alt: "Random Quote Generator",
-        description: "Random Quote Generator",
+        alt: "Quote Generator",
+        description: "Quote Generator",
       },
       {
         src: "../img/thumbnails/javascript-calculator.PNG",
@@ -66,15 +67,10 @@ const mapStateToProps = (state) => {
         description: "Streaming Service",
       },
       {
-        src: "../img/thumbnails/bartending-drills.PNG",
-        alt: "Bartending Drills",
-        description: "Bartending Drills",
-      },
-      /*{
         src: "../img/thumbnails/chess.PNG",
         alt: "Chess Board",
         description: "Chess Board",
-      },*/
+      },
     ],
   }
 }

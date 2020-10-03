@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+var ImageminPlugin = require('imagemin-webpack-plugin').default
 
 const helpers = require('./helpers');
 const commonConfig = require('./webpack.common');
@@ -12,14 +13,16 @@ module.exports = merge(commonConfig, {
     chunkFilename: '[id].[hash].chunk.js'
   },
 
+  optimization: {
+    minimize: true
+  },
+
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false,
-        screw_ie8: true
-      },
-      output: {
-        comments: false
+    // Make sure that the plugin is after any plugins that add images
+    new ImageminPlugin({
+      disable: process.env.NODE_ENV !== 'production', // Disable during development
+      pngquant: {
+        quality: '95-100'
       }
     })
   ]

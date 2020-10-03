@@ -67,7 +67,7 @@ class QuoteGen extends React.Component {
             <p id="quotegen-text">"{quoteObj.text}"</p>
             <p id="quotegen-author">-{quoteObj.author}</p>
             <hr width="80%"/>
-            <a id="quotegen-tweet-quote" href="twitter.com/intent/tweet"><img id="quotegen-twitter-logo" src="https://png.icons8.com/color/1600/twitter-squared.png" alt="tweet the quote"/></a>
+            <a id="quotegen-tweet-quote" href="https://twitter.com/intent/tweet"><img id="quotegen-twitter-logo" src="./img/twitter-logo.png" alt="tweet the quote"/></a>
             <button className="btn btn-primary" id="quotegen-new-quote" onClick={this.getNewQuote}>New Quote</button>
           </div>
         </div>

@@ -51,7 +51,7 @@ const actionCreators = {
             "streaming": "true",
             "access-method": "code",
             "username": "user2",
-            "current-playing": "Old Scottish Bullshit",
+            "current-playing": "Shake it off - Taylor Swift",
             "last-online": "",
           },
         ];

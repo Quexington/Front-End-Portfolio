@@ -8,6 +8,13 @@ const actionCreators = {
         display,
       });
     }
+  },
+  stop: function(){
+    return function(dispatch){
+      dispatch({
+        type: ACTIONS.STOP_ANIMATIONS,
+      });
+    }
   }
 }
 

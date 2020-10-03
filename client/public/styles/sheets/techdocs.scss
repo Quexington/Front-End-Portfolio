@@ -6,7 +6,7 @@
 
 #techdocs-main-doc {
   height: 100%;
-  padding-top: 50px;
+  // padding-top: 50px;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: auto auto auto auto auto;
@@ -49,6 +49,7 @@
 }
 
 #techdocs-flex-fix {
+  padding-top: 50px;
   display: flex;
   border: solid black;
   flex-direction: column;

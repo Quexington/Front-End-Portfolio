@@ -12,7 +12,7 @@ class Thumbnail extends React.Component {
         window.scrollTo(0,0);
       }}>
         <img className="thumbnail-img" src={this.props.src} alt={this.props.alt}/>
-        <p className="thumbnail-description">{this.props.description}</p>
+        <div class="thumbnail-text">{this.props.description}</div>
       </div>
     )
   }

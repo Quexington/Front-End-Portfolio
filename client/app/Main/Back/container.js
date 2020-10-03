@@ -14,6 +14,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     update: actionCreators.updateDisplay,
+    stopAnimations: actionCreators.stop,
   }, dispatch);
 }
 

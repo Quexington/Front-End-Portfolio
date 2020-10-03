@@ -8,9 +8,9 @@
 #calculator-subcontainer {
   padding: 5px;
   padding-bottom: 10px;
-  padding-top: 55px;
+  padding-top: 5px;
   height: 100%;
-  width: 100%;
+  width: 50%;
   background-color: #98ff98;
   margin: auto;
 }
@@ -59,4 +59,10 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  #calculator-subcontainer {
+    width: 100%;
+  }
 }

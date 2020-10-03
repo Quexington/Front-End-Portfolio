@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect} from 'react';
 
 import Back from '../Main/Back/container';
 
@@ -17,18 +17,6 @@ class Drum extends React.Component {
     this.handleToggle = this.handleToggle.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleClick = this.handleClick.bind(this);
-  }
-
-  componentDidMount(){
-    document.addEventListener("keydown", (e) => {
-      this.handleKeyPress(e);
-    });
-  }
-
-  componentWillUnmount(){
-    document.removeEventListener("keydown", (e) => {
-      this.handleKeyPress(e);
-    });
   }
 
   updateDisplay(mes, bank) {
@@ -88,39 +76,39 @@ class Drum extends React.Component {
       switch (e.keyCode){
         case 81:
           key = "Q";
-          audio.play(key);
+          func(key);
           break;
         case 87:
           key = "W";
-          audio.play(key);
+          func(key);
           break;
         case 69:
           key = "E";
-          audio.play(key);
+          func(key);
           break;
         case 65:
           key = "A";
-          audio.play(key);
+          func(key);
           break;
         case 83:
           key = "S";
-          audio.play(key);
+          func(key);
           break;
         case 68:
           key = "D";
-          audio.play(key);
+          func(key);
           break;
         case 90:
           key = "Z";
-          audio.play(key);
+          func(key);
           break;
         case 88:
           key = "X";
-          audio.play(key);
+          func(key);
           break;
         case 67:
           key = "C";
-          audio.play(key);
+          func(key);
           break;
         default:
           break;
@@ -137,6 +125,10 @@ class Drum extends React.Component {
   }
 
   render(){
+    document.addEventListener("keydown", (e) => {
+      this.handleKeyPress(e);
+    });
+
     let buttons = this.state.option ? this.props.bankOne : this.props.bankTwo;
     const labels = buttons.map((e) => {
       return <div id={e.id} key={e.keyTrigger} className="drum-drum-pad" onClick={this.handleClick}>
